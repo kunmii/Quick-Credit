@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Quick Credit</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">
+            <a href="./index.html">
+                <i class="fa fa-usd"></i>
+                <span>QuickCredit</span>
+            </a>
+        </h1>
+        <ul class="header-group">
+            
+            <li class="admin-action-header">
+                <a href="./view.html">Admin Actions</a>
+                <ul class="admin-action">
+                    <li><a href="./">Verify Client</a></li>
+                    <li> <a href="./view-loans.html">View All Loans</a></li>
+                    <li><a href="./view-loans.html">View Current Loans</a></li>
+                    <li><a href="./view-loans.html"> View Repaid Loans</a>  </li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <section class="signup-main-section">
+            <div class="flex-container-detail">
+               <div class="detail-loan-card mt-top">
+                   <div class="name">Ogundipe Akinkunmi</div>
+                   <div> 29th January 2019 </div>
+                   <div class="status"> 
+                        <h3 onclick="closeAccordion()">Pending</h3>
+                        <i class="fa fa-arrow"></i>
+                   </div>
+               </div>
+               <div class="detail-loan-card-2 d-none">
+                   <div class="name mt-1">Name: Ogundipe Akinkunmi</div>
+                   <div class="mt-1">Created Date:  29th January 2019 </div>
+                   <div class="email mt-1">
+                        Status: Pending
+                     </div>
+                     <div class="email mt-1">
+                        Total Amount: N150k
+                     </div>
+                     <div class="email mt-1">
+                        Payment Installation: N50k
+                     </div>
+                     <div class="email mt-1">
+                        Balance: N100k
+                     </div>
+                     <div class="email mt-1">
+                        Duration: 3 months
+                     </div>
+                     <div class="email mt-1">
+                        Interest: 5%
+                     </div>
+                     <div>
+                         <button class="btn-sm btn-verify">Approve</button>
+                         <button class="btn-sm btn-primary">Reject</button>
+                     </div>
+               </div>
+            </div>
+    
+        </section>    
+    <script type="text/javascript">
+        let status = false;
+        function closeAccordion() {
+            status = !status;
+            if (status) {
+                document.getElementsByClassName('detail-loan-card-2')[0].classList.remove('d-none');
+                document.getElementsByClassName('detail-loan-card')[0].style.color = 'red';
+                document.getElementsByClassName('detail-loan-card')[0].style.borderBottomLeftRadius = '0px';
+                document.getElementsByClassName('detail-loan-card')[0].style.borderBottomRightRadius = '0px';
+
+            } else {
+                document.getElementsByClassName('detail-loan-card-2')[0].classList.add('d-none');
+                document.getElementsByClassName('detail-loan-card')[0].style.color = 'black';
+                document.getElementsByClassName('detail-loan-card')[0].style.borderBottomLeftRadius = '.2rem';
+                document.getElementsByClassName('detail-loan-card')[0].style.borderBottomRightRadius = '.2rem';
+            }
+            
+        }
+    </script>
+</body>
+</html>
